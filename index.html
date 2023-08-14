@@ -14,53 +14,62 @@
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <div class="search">
-          <input type="text" placeholder="City.." />
-          <button><img src="images/search.png" /></button>
-        </div>
-        <h1>Johanessburg</h1>
-        <ul>
-          <li>Monday 10:00</li>
-          <li>Clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img src="images/clear.png" alt="Clear" height="80px" />
-            12°C | °F
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="search">
+            <input type="text" placeholder="City.." />
+            <button><img src="images/search.png" /></button>
           </div>
-          <div class="col-6">
+          <div class="overview">
+            <h1>Johanessburg</h1>
             <ul>
-              <li>Humidity 73%</li>
-              <li>Wind 3 km/h</li>
+              <li>Monday 10:00</li>
+              <li>Clear</li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img src="images/clear.png" alt="Clear" class="float-left" />
+                <div class="float-left">
+                  <strong>12</strong>
+                  <span class="units">°C | °F</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity 73%</li>
+                <li>Wind 3 km/h</li>
+              </ul>
+            </div>
 
-          <div class="row" id="Days">
-            <div class="col-2">
-              Mon
-              <br />
-              <img src="images/clouds.png" alt="clouds" height="80px" />
-            </div>
-            <div class="col-2">
-              Tue
-              <br />
-              <img src="images/clouds.png" alt="rain" height="80px" />
-            </div>
-            <div class="col-2">
-              Wed
-              <br />
-              <img src="images/drizzle.png" alt="drizzle" height="80px" />
-            </div>
-            <div class="col-2">
-              Thur
-              <br />
-              <img src="images/clear.png" alt="clear" height="80px" />
-            </div>
-            <div class="col-2">
-              Fri
-              <br />
-              <img src="images/mist.png" alt="mist" height="80px" />
+            <div class="row" id="Days">
+              <div class="col-2">
+                Mon
+                <br />
+                <img src="images/clouds.png" alt="clouds" height="80px" />
+              </div>
+              <div class="col-2">
+                Tue
+                <br />
+                <img src="images/clouds.png" alt="rain" height="80px" />
+              </div>
+              <div class="col-2">
+                Wed
+                <br />
+                <img src="images/drizzle.png" alt="drizzle" height="80px" />
+              </div>
+              <div class="col-2">
+                Thur
+                <br />
+                <img src="images/clear.png" alt="clear" height="80px" />
+              </div>
+              <div class="col-2">
+                Fri
+                <br />
+                <img src="images/mist.png" alt="mist" height="80px" />
+              </div>
             </div>
           </div>
         </div>
