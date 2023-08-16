@@ -55,33 +55,13 @@ li::first-letter {
   font-size: 16px;
   top: -34px;
 }
-.search {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.units a {
+  text-decoration: none;
 }
-.search input {
-  border: 0;
-  outline: 0;
-  background: #fff;
-  color: #555;
-  padding: 10px 30px;
-  height: 35px;
-  border-radius: 10px;
-  flex: 1;
-  margin-right: 30px;
-  font-size: 18px;
+.weather-temperature .active {
+  color: rgb(139, 137, 137);
+  cursor: default;
 }
-.search button {
-  border: 0;
-  outline: 0;
-  background: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-}
-.search button img {
-  width: 30px;
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
