@@ -34,7 +34,7 @@ li::first-letter {
 .card {
   padding: 20px;
   border-radius: 10px;
-  background-image: url(../images/Sky.avif);
+  background-image: #fff;
   color: rgb(139, 137, 137);
 }
 .overview {
@@ -47,7 +47,7 @@ li::first-letter {
   height: 80px;
 }
 .weather-temperature strong {
-  color: rgb(139, 137, 137);
+  color: #f1a;
   font-size: 64px;
   font-weight: 500;
   line-height: 1;
@@ -62,9 +62,24 @@ li::first-letter {
   text-decoration: none;
 }
 .weather-temperature .active {
-  color: rgb(139, 137, 137);
+  color: #f1a;
   cursor: default;
 }
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+.weather-forecast {
+  margin: 2px;
+  text-align: center;
+  color: #f1a;
+}
+.weather-forcast-date {
+  font-size: 20px;
+  opacity: 0.6;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+.weather-forecast-temperatures {
+  font-size: 17px;
 }
