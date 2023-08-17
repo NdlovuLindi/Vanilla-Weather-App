@@ -30,7 +30,9 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celciusTemp = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celciusTemp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -56,14 +58,30 @@ function handleSubmit(event) {
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitTemp = (10 * 9) / 5 + 32;
-  alert(fahrenheitTemp);
+  let temperatureElement = document.querySelector("#temperature");
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
+
+function displayCelciusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+
+let celciusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Vanderbijlpark");
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celciusLink = document.querySelector("#Celcius-link");
+celciusLink.addEventListener("click", displayCelciusTemp);
+
+search("Vanderbijlpark");
