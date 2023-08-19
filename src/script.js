@@ -93,6 +93,8 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  displayCelciusTemp({ preventDefault: function () {} });
+
   getForecast(response.data.coord);
 }
 function search(city) {
